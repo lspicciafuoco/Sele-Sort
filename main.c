@@ -14,7 +14,7 @@ int main(int argc, char** argv){
     for(i = 0; i < N; i++) {
         indiceMinimo = i;
         for(j = i + 1; j < N; j++) { 
-            if (v[indiceMinimo] > v[j]) {
+            if (v[indiceMinimo] < v[j]) {
                 indiceMinimo = j;
             }
         }
@@ -24,7 +24,7 @@ int main(int argc, char** argv){
             v[indiceMinimo] = t;
         }
     }
-    printf("Algoritmo ordinato: \n");
+    printf("Algoritmo ordinato (Select-Sort) : \n");
     for(i = 0; i < N; i++) {
     printf("%d ", v[i]);
     }
